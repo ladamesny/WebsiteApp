@@ -4,13 +4,6 @@ require 'sinatra/reloader' if development?
 require 'pony'
 require 'pry' if development?
 
-configure :production do
-  set   :email_address => 'smtp.sendgrid.net',
-        :email_user_name => ENV['SENDGRID_USERNAME'],
-        :email_password =>  ENV['SENDGRID_PASSWORD'],
-        :email_domain => 'heroku.com'
-end
-
 helpers do
 
   def send_message
@@ -21,11 +14,11 @@ helpers do
       :body => params[:message],
       :via => :smtp,
       :via_options => {
-        :address              => 'smtp.gmail.com',
+        :address              => 'smtp.sendgrid.com',
         :port                 => '587',
-        :domain => 'localhost.localdomain',
-        :user_name            => 'adames.larry',
-        :password             => '10Batman05#',
+        :domain => 'heroku.com',
+        :user_name            => ENV['SENDGRID_USERNAME'],
+        :password             => ENV['SENDGRID_PASSWORD'],
         :authentication       => :plain,
         :enable_starttls_auto => true
       })
