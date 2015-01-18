@@ -16,6 +16,7 @@ helpers do
       :via_options => {
         :address              => 'smtp.sendgrid.net',
         :port                 => '587',
+        :domain => 'http://larryadames.herokuapp.com'
         :enable_starttls_auto => true,
         :user_name            => 'adames.larry',
         :password             => '10Batman05#',

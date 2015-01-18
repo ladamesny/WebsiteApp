@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'pony'
 gem 'sinatra-flash'
-gem 'pry'
+gem 'pony'
+gem 'rack-flash-session'
+
+group :development do
+  gem 'sinatra-contrib'
+  gem 'pry'
+end
