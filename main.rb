@@ -14,7 +14,7 @@ helpers do
       :body => params[:message],
       :via => :smtp,
       :via_options => {
-        :address              => 'smtp.sendgrid.com',
+        :address              => 'smtp.sendgrid.net',
         :port                 => '587',
         :domain => 'heroku.com',
         :user_name            => ENV['SENDGRID_USERNAME'],
