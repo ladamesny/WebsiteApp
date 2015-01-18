@@ -32,7 +32,6 @@ get '/' do
 end
 
 post '/contact' do
-  binding.pry
   send_message
   redirect to('/')
 end
