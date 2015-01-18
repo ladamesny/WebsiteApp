@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pony'
-require 'pry'
+require 'pry' if development?
 
 helpers do
 
