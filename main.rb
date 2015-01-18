@@ -14,7 +14,7 @@ helpers do
       :body => params[:message],
       :via => :smtp,
       :via_options => {
-        :address              => 'smtp.gmail.com',
+        :address              => 'smtp.sendgrid.net',
         :port                 => '587',
         :enable_starttls_auto => true,
         :user_name            => 'adames.larry',
