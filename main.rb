@@ -14,11 +14,11 @@ helpers do
       :body => params[:message],
       :via => :smtp,
       :via_options => {
-        :address              => 'smtp.sendgrid.net',
+        :email_address              => 'smtp.sendgrid.net',
         :port                 => '587',
-        :domain => 'http://larryadames.herokuapp.com',
-        :user_name            => ENV['SENDGRID_USERNAME'],
-        :password             => ENV['SENDGRID_PASSWORD'],
+        :email_domain => 'heroku.com',
+        :email_user_name            => ENV['SENDGRID_USERNAME'],
+        :email_password             => ENV['SENDGRID_PASSWORD'],
         :authentication       => :plain,
         :enable_starttls_auto => true
       })
